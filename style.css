@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.css-1d391kg, .css-1dp5r8l { /* Sidebar styling */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.css-1lcbmhc { /* Main content area */
+    padding: 20px 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.stButton>button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.stSelectbox>div>div {
+    border-radius: 5px;
+}
+
+.stDataFrame, .stTable {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.stMetric {
+    border-left-width: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.stImage {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.css-1d391kg div[data-testid="stMarkdownContainer"] p, .css-1d391kg div[data-testid="stSelectbox"] label {
+    font-size: 18px !important;
+}
+
+/* This will hide the Streamlit header and footer */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
