@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src import utils
-from app import model_loader # Added model_loader import
+from app import model_loader
 
 def main():
     st.set_page_config(
@@ -43,14 +43,13 @@ def main():
     """, unsafe_allow_html=True)
 
 
-    # Use caching for model loading
     @st.cache_resource
     def cached_load_keras_model():
-        return model_loader.load_keras_model() # Changed to model_loader
+        return model_loader.load_keras_model()
 
     @st.cache_resource
     def cached_load_face_cascade():
-        return model_loader.load_face_cascade() # Changed to model_loader
+        return model_loader.load_face_cascade()
 
     model = cached_load_keras_model()
     face_cascade = cached_load_face_cascade()
@@ -58,7 +57,7 @@ def main():
 
     @st.cache_data
     def get_face_detection_results(df_filepaths):
-        face_cascade_local = model_loader.load_face_cascade() # Changed to model_loader
+        face_cascade_local = model_loader.load_face_cascade()
         def check_for_face(image_path):
             try:
                 img = cv2.imread(image_path)
@@ -190,7 +189,7 @@ def main():
 
                 with tab3:
                     st.markdown("#### Final Prediction Result")
-                    final_image = model_loader.draw_prediction(image_to_predict, faces, predicted_age, actual_age if isinstance(actual_age, int) else 0) # Changed to model_loader
+                    final_image = model_loader.draw_prediction(image_to_predict, faces, predicted_age, actual_age if isinstance(actual_age, int) else 0)
                     st.image(final_image, caption="Final Image with Prediction", width=400)
 
                     st.subheader("Prediction Metrics")
