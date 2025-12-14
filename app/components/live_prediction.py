@@ -6,11 +6,8 @@ import random
 import cv2
 import sys
 
-# Add the parent directory to the path to allow imports from `src`
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from src import utils
-from app import model_loader
+from .. import model_loader # Changed to relative import
 
 def main():
     st.title("Live Age Prediction")

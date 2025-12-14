@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import sys
 
-# Add the parent directory to the path to allow imports from `app.pages` and `src`
+# Add the parent directory to the path to allow imports from `app.components` and `src`
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Set up Streamlit page configuration
@@ -17,9 +17,9 @@ st.sidebar.title("Navigation")
 
 # Define pages as a dictionary
 PAGES = {
-    "Home": "app.pages.home", # Placeholder, content is embedded below
-    "Live Prediction": "app.pages.live_prediction",
-    "Evaluation Metrics": "app.pages.evaluation_metrics"
+    "Home": "app.components.home", # Placeholder, content is embedded below
+    "Live Prediction": "app.components.live_prediction",
+    "Evaluation Metrics": "app.components.evaluation_metrics"
 }
 
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
