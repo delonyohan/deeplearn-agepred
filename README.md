@@ -15,8 +15,6 @@ The primary goal of this project is to develop a deep learning model capable of 
 
 This application serves as a comprehensive demonstration of the end-to-end process of building and deploying a deep learning model for a real-world computer vision task.
 
-**Note on Gender Prediction:** This application does not predict gender. The UTKFace dataset includes gender labels, but this project focuses solely on age estimation. The CNN model mentioned in the project context is used for age prediction, not gender prediction.
-
 ## Model Performance Overview
 
 The performance of the two models was evaluated on the test set. The ResNet50 model significantly outperforms the custom CNN across all metrics.
