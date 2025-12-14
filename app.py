@@ -4,15 +4,11 @@ st.set_page_config(
     page_title="Deep Learning Age Prediction",
     page_icon="👴",
     layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
+    initial_sidebar_state="expanded"
 )
 
 st.markdown("""
 <style>
-    /* You can still add custom CSS here if needed, but for theming, use st.set_page_config */
 </style>
 """, unsafe_allow_html=True)
 
@@ -20,7 +16,7 @@ st.title("Welcome to the Deep Learning Age Prediction App! 👴👶")
 
 st.markdown("""
     This application demonstrates an age prediction model built using deep learning techniques. 
-    This app utilizes a ResNet model for age prediction and a CNN model for gender prediction.
+    This app utilizes a ResNet model for age prediction.
     Explore the different pages in the sidebar to understand the model's performance,
     and try out live predictions using images from the available dataset.
 

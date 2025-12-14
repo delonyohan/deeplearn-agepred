@@ -11,7 +11,6 @@ st.markdown("""
     We evaluate their performance using Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE).
 """)
 
-# Evaluation Metrics Data (from notebook.ipynb)
 metrics_data = {
     'Model': ['CNN', 'ResNet50'],
     'MAE': [8.58, 6.72],
