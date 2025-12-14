@@ -9,7 +9,8 @@ import sys
 # Add the parent directory to the path to allow imports from `src`
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src import utils # Adjusted import
+from src import utils
+from app import model_loader # Added model_loader import
 
 def main():
     st.set_page_config(
@@ -45,11 +46,11 @@ def main():
     # Use caching for model loading
     @st.cache_resource
     def cached_load_keras_model():
-        return utils.load_keras_model() # Using utils
+        return model_loader.load_keras_model() # Changed to model_loader
 
     @st.cache_resource
     def cached_load_face_cascade():
-        return utils.load_face_cascade() # Using utils
+        return model_loader.load_face_cascade() # Changed to model_loader
 
     model = cached_load_keras_model()
     face_cascade = cached_load_face_cascade()
@@ -57,7 +58,7 @@ def main():
 
     @st.cache_data
     def get_face_detection_results(df_filepaths):
-        face_cascade_local = utils.load_face_cascade() # Using utils
+        face_cascade_local = model_loader.load_face_cascade() # Changed to model_loader
         def check_for_face(image_path):
             try:
                 img = cv2.imread(image_path)
@@ -153,7 +154,7 @@ def main():
         if image_to_predict:
             st.subheader("Prediction Process")
 
-            processed_input, img_with_rect, cropped_face, faces = utils.load_and_preprocess_image(image_to_predict, face_cascade)     
+            processed_input, img_with_rect, cropped_face, faces = model_loader.load_and_preprocess_image(image_to_predict, face_cascade)     
 
             if processed_input is not None:
                 predicted_age = model.predict(processed_input)[0][0]
@@ -189,7 +190,7 @@ def main():
 
                 with tab3:
                     st.markdown("#### Final Prediction Result")
-                    final_image = utils.draw_prediction(image_to_predict, faces, predicted_age, actual_age if isinstance(actual_age, int) else 0)
+                    final_image = model_loader.draw_prediction(image_to_predict, faces, predicted_age, actual_age if isinstance(actual_age, int) else 0) # Changed to model_loader
                     st.image(final_image, caption="Final Image with Prediction", width=400)
 
                     st.subheader("Prediction Metrics")

@@ -17,6 +17,7 @@ st.sidebar.title("Navigation")
 
 # Define pages as a dictionary
 PAGES = {
+    "Home": "app.pages.home",
     "Live Prediction": "app.pages.live_prediction",
     "Evaluation Metrics": "app.pages.evaluation_metrics"
 }
