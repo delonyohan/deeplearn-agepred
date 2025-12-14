@@ -30,11 +30,19 @@ This project is structured to follow best practices in machine learning engineer
     ```
 
 ### Running the Application
-To start the Streamlit application, run the following command from the root directory:
+This application is structured as a multi-page Streamlit app, with a central dispatcher managing navigation between different sections: Home, Live Prediction, and Evaluation Metrics.
+
+To start the Streamlit application locally, navigate to the project's root directory and run the following command:
 ```bash
-streamlit run app/app.py
+streamlit run app/streamlit_app.py
 ```
-The application will open in your web browser. You can then upload an image or select one from the gallery to see the age prediction.
+The application will open in your web browser. You can then use the sidebar navigation to explore the Home page, perform live age predictions, or view model evaluation metrics.
+
+#### Deployment to Streamlit Cloud
+For deployment on Streamlit Cloud, ensure your repository is linked and configure the "Main module path" in your app's advanced settings to:
+```
+app/streamlit_app.py
+```
 
 ## Built With
 

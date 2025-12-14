@@ -6,6 +6,10 @@ scikit-learn==1.7.2
 opencv-python-headless==4.12.0.88
 Pillow==12.0.0
 PyYAML==6.0.3
-# Tensorflow is used in the project, but was not found in the environment.
-# Please install the appropriate version of tensorflow for your system (e.g., tensorflow or tensorflow-cpu).
+# TensorFlow compatibility:
+# As of current knowledge, TensorFlow does not officially support Python 3.11 for stable releases.
+# If you are using Python 3.11, you might encounter issues or need to use an experimental/nightly build.
+# For stable TensorFlow versions, consider using Python 3.10 or refer to the official TensorFlow documentation
+# for the latest compatibility information.
+# If proceeding with Python 3.11, ensure you install a compatible version (e.g., 'tensorflow' or 'tensorflow-cpu').
 tensorflow
