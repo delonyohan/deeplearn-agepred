@@ -3,8 +3,12 @@ from PIL import Image
 import numpy as np
 import os
 import cv2
+import sys
 
-import app.model_loader as model_loader
+# Add the parent directory to the path to allow imports from `src`
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from app import model_loader
 from src.utils import AGE_CATEGORIES
 
 st.set_page_config(
