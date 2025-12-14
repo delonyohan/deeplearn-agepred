@@ -13,13 +13,6 @@ from src import utils
 from app import model_loader
 
 def main():
-    st.set_page_config(
-        page_title="Live Age Prediction",
-        page_icon="👴",
-        layout="wide",
-        initial_sidebar_state="expanded"
-    )
-
     st.title("Live Age Prediction")
 
     st.markdown("""

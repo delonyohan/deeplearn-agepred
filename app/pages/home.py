@@ -1,13 +1,6 @@
 import streamlit as st
 
 def main():
-    st.set_page_config(
-        page_title="Deep Learning Age Prediction",
-        page_icon="👴",
-        layout="wide",
-        initial_sidebar_state="expanded"
-    )
-
     st.markdown("""
     <style>
     </style>
