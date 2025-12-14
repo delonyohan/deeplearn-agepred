@@ -26,7 +26,7 @@ st.markdown("""
 
     1.  **Data Preprocessing:** Utilizing the UTKFace dataset, which contains over 20,000 images, each labeled with age, gender, and ethnicity. The images are preprocessed to be suitable for model training.
     2.  **Model Development:** Two different architectures are explored for this task:
-        - A custom **Convolutional Neural Network (CNN)** built from scratch.
+        - A custom **Convolutional Neural Network (CNN)** for age prediction built from scratch.
         - A more complex **Residual Network (ResNet)**, leveraging transfer learning principles.
     3.  **Model Evaluation:** The performance of both models is rigorously evaluated using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE).
     4.  **Live Prediction:** The best-performing model is deployed in this interactive web application, allowing users to select an image and see the age prediction in real-time.
