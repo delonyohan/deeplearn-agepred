@@ -18,7 +18,7 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import GlobalAveragePooling2D
 
-DATASET_PATH = "dataset/UTKFace" # Updated to local path
+DATASET_PATH = "data/dataset/UTKFace"
 
 
 filepaths = []
@@ -148,7 +148,7 @@ axes[1].legend()
 axes[1].grid(True)
 
 plt.tight_layout()
-plt.savefig('assets/cnn_training_plot.png')
+plt.savefig('outputs/plots/cnn_training_plot.png')
 
 test_loss, test_mae, test_mse = model.evaluate(test_ds_cnn)
 
@@ -182,7 +182,7 @@ plt.tight_layout()
 print(f"MAE: {test_mae:.2f} years")
 print(f"MSE: {test_mse:.2f}")
 print(f"RMSE: {np.sqrt(test_mse):.2f} years")
-plt.savefig('assets/cnn_prediction_plot.png')
+plt.savefig('outputs/plots/cnn_prediction_plot.png')
 
 base_model = ResNet50(
     weights='imagenet',
@@ -253,7 +253,7 @@ axes[1].legend()
 axes[1].grid(True)
 
 plt.tight_layout()
-plt.savefig('assets/resnet_training_plot.png')
+plt.savefig('outputs/plots/resnet_training_plot.png')
 
 test_loss_resnet, test_mae_resnet, test_mse_resnet = resnet_model.evaluate(test_ds_resnet)
 
@@ -290,9 +290,9 @@ plt.tight_layout()
 print(f"MAE: {test_mae_resnet:.2f} years")
 print(f"MSE: {test_mse_resnet:.2f}")
 print(f"RMSE: {np.sqrt(test_mse_resnet):.2f} years")
-plt.savefig('assets/resnet_prediction_plot.png')
+plt.savefig('outputs/plots/resnet_prediction_plot.png')
 
-resnet_model.save('resnet_age_prediction_model.h5')
+resnet_model.save('outputs/resnet_age_prediction_model.h5')
 
 comparison = pd.DataFrame({
     'Model': ['CNN', 'ResNet50'],
@@ -318,4 +318,4 @@ plt.title('Model Performance Metrics Comparison')
 plt.xticks(index + bar_width, comparison['Model'])
 plt.legend()
 plt.tight_layout()
-plt.savefig('assets/model_metrics_plot.png')
+plt.savefig('outputs/plots/model_metrics_plot.png')

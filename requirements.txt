@@ -1,7 +1,11 @@
-streamlit
+streamlit==1.52.1
+pandas==2.3.3
+numpy==2.3.4
+matplotlib==3.10.7
+scikit-learn==1.7.2
+opencv-python==4.12.0.88
+Pillow==12.0.0
+PyYAML==6.0.3
+# Tensorflow is used in the project, but was not found in the environment.
+# Please install the appropriate version of tensorflow for your system (e.g., tensorflow or tensorflow-cpu).
 tensorflow
-opencv-python-headless
-pandas
-numpy
-scikit-learn
-matplotlib

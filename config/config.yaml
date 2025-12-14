@@ -1,0 +1,10 @@
+# Configuration for the Age Prediction Application
+
+# File paths
+model_path: "outputs/resnet_age_prediction_model.h5"
+face_cascade_path: "config/haarcascade_frontalface_default.xml"
+dataset_path: "data/dataset/UTKFace"
+output_plots_path: "outputs/plots"
+
+# Model parameters
+image_size: 224
